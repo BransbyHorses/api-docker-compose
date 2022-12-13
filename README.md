@@ -5,7 +5,7 @@ This repo contains a docker-compose file that spins up the Bransby rest-api and 
 This serves as the 'back-end' of the Bransby Training Tracker application.
 
 
-###Install docker
+### Install docker
 
 Docker is required to run the database, storage and rest-api.
 
@@ -25,7 +25,7 @@ docker-compose -v
 ```
 
 
-###Add environment variables
+### Add environment variables
 
 
 `docker-compose.yaml` is annotated with instructions on where to add the required user-defined environment variables, such as the database password. 
@@ -39,7 +39,7 @@ environment:
 
 ```
 
-###Spin up the application
+### Spin up the application
 
 To run the application: 
 - ensure that your command line's present directory is the same as the one in which the `docker-compose.yml` file is stored.
@@ -49,7 +49,7 @@ To run the application:
 If it's all worked, the database and rest-api should be accessible from Docker Desktop (if it's installed) or the CLI - use `docker ps` to list containers that are running.
 
 
-###Swagger
+### Swagger
 
 The api is available on localhost:8080.
 
