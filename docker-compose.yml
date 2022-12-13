@@ -5,9 +5,9 @@ services:
     image: postgres:latest
     container_name: rest-api-db
     environment:
-      - POSTGRES_USER=  # set a username postgres
-      - POSTGRES_PASSWORD= # set a password
-      - POSTGRES_DB= # create a database, eg equine-training-tracker-db
+      - POSTGRES_USER=bransby  # set a username 
+      - POSTGRES_PASSWORD=horses # set a password
+      - POSTGRES_DB=equine-training-tracker-db
     ports:
       - "5432:5432" # the port that the database is exposed on
     restart: always
@@ -19,9 +19,9 @@ services:
     container_name: rest-api
     restart: always
     environment:
-      - DB_USER= # the user should match the POSTGRES_USER defined above 
-      - DB_PASSWORD= # the password should match the POSTGRES_PASSWORD defined above
-      - DB_NAME= # the DB_NAME should match the value of "POSTGRES_DB" above (eg equine-training-tracker-db)
+      - DB_USER=bransby # the user should match the POSTGRES_USER defined above 
+      - DB_PASSWORD=horses # the password should match the POSTGRES_PASSWORD defined above
+      - DB_NAME=equine-training-tracker-db
       - DATASOURCE=jdbc:postgresql://rest-api-db:5432/ # This needs to point to the port that the database is exposed on (defined above)
     ports:
       - "8080:8080" # the port that the rest-api is exposed on
